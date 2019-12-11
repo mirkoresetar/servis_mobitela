@@ -60,7 +60,7 @@ alter table usluga add foreign key (serviser) references serviser(sifra);
 alter table usluga add foreign key (korisnik) references korisnik(sifra);
 
 alter table servisusluga add foreign key (usluga) references usluga(sifra);
-alter table servisusluga add foreign key (korisnik) references korisnik(sifra);
+alter table servisusluga add foreign key (servis) references servis(sifra);
 
 SELECT * FROM korisnik;
 
@@ -109,7 +109,7 @@ insert into usluga(sifra,ime,cijena,serviser,korisnik) values
 
 select * from servisusluga;
 
-insert into servisusluga(usluga,korisnik)
+insert into servisusluga(servis,usluga)
 
 
 
