@@ -1,5 +1,5 @@
 drop database if exists servismobitela;
-create database servismobitela;
+create database servismobitela default  CHARACTER SET utf8 COLLATE utf8_general_ci;
 use servismobitela;
 
 create table korisnik(
@@ -49,8 +49,8 @@ SELECT * FROM korisnik;
 
 
 insert into korisnik(sifra,ime,prezime,telefon,email) values
-(null,'Vedran','Bariæ','0913532244','vedranbaric@gmail.com'),
-(null,'Marko', 'Paviæ','0998877666','markopavic@gmial.com'),
+(null,'Vedran','Barić','0913532244','vedranbaric@gmail.com'),
+(null,'Marko', 'Pavić¦','0998877666','markopavic@gmial.com'),
 (null, 'Mario', 'Horvat','098765432','mariohorvat@gmail.com');
 
 
@@ -66,9 +66,9 @@ insert into poslovnica(sifra,ime,adresa) values
 select * from serviser;
 
 insert into serviser(sifra,ime,prezime,telefon,email,iban) values
-(null,'Mario', 'Bariæ', '099883344','mariobaric@gmail.com', null),
+(null,'Mario', 'Barić', '099883344','mariobaric@gmail.com', null),
 (null,'Marko', 'Horvat', '099883333','markohorvat@gmail.com', null),
-(null,'Vedran', 'Paviæ', '099883322','vedranpavic@gmail.com', null);
+(null,'Vedran', 'Pavić', '099883322','vedranpavic@gmail.com', null);
 
 #describe servis
 
